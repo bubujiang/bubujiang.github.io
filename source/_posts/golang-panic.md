@@ -3,6 +3,9 @@ title: golang异常处理
 date: 2020-06-11 20:00:43
 categories:
 - golang
+tags: 
+- golang
+- panic
 notoc: true
 ---
 * 可以在不希望程序继续运行的前提下使用异常
