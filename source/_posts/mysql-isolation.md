@@ -3,7 +3,7 @@ title: mysql隔离级别
 date: 2020-07-01 00:53:16
 tags: 
 - mysql
-- 事物
+- 事务
 - 隔离级别
 categories:
 - mysql
