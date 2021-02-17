@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>golang slice注意事项 | 沧海一粟</title><link rel="stylesheet" type="text/css" href="/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><script type="text/javascript" src="//polyfill.io/v3/polyfill.min.js?features=es6"></script><script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="沧海一粟" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/plugins/prettify/doxy.css"><script type="text/javascript" src="/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">沧海一粟</a></h1></div><p class="m-desc">所有的不公正对待将变成我前进的动力。</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/archives/">归档</a></li><li><span class="dot">●</span><a href="/categories/">分类</a></li><li><span class="dot">●</span><a href="/tags/">标签</a></li><li><span class="dot">●</span><a href="/about/">关于</a></li><li><span class="dot">●</span><a href="/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="搜索" onfocus="if(this.value=='搜索'){this.value='';}" onblur="if(this.value==''){this.value='搜索';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">golang slice注意事项</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/2020/06/12/golang-slice/">2020-06-12</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/categories/golang/">golang</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><pre><code>//newSlice和oldSlice指向同一个底层数组
+newSlice := oldSlice[0:cap(oldSlice)]
+if fmt.Sprintf(&quot;%p&quot;,&amp;newSlice[0]) == fmt.Sprintf(&quot;%p&quot;,&amp;oldSlice[0]){
+    fmt.Printf(&quot;这一句必然会执行&quot;)
+}</code></pre><h1 id="扩容"><a href="#扩容" class="headerlink" title="扩容"></a>扩容</h1><h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><blockquote>
+<p>采用append实现,当容量不够时会自动扩容,自动扩容的尺寸为append之前容量的2倍,不推荐此方法.</p>
+</blockquote>
+<pre><code>oldSlice := []int{0,1,2}
+fmt.Print(cap(oldSlice))//3
+newSlice := append(oldSlice,3)
+fmt.Print(cap(newSlice))//6
+if fmt.Sprintf(&quot;%p&quot;,&amp;newSlice[0]) == fmt.Sprintf(&quot;%p&quot;,&amp;oldSlice[0]){
+    fmt.Printf(&quot;这一句不会执行&quot;)
+}</code></pre><h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><blockquote>
+<p>采用copy实现,内存占用少,推荐此方法.</p>
+</blockquote>
+<pre><code>oldSlice := []int{0,1,2}
+newSlice := make([]int,3,4)
+copy(newSlice,oldSlice)
+newSlice[3] = 3// or newSlice = append(newSlice,3)
+fmt.Print(cap(newSlice))//4
+if fmt.Sprintf(&quot;%p&quot;,&amp;newSlice[0]) == fmt.Sprintf(&quot;%p&quot;,&amp;oldSlice[0]){
+    fmt.Printf(&quot;这一句不会执行&quot;)
+}</code></pre><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
+<li>因为重新切分的切片和原切片引用同一个数组,所以当指需要原切片一小部分数据时,最好复制这一小部分数据,否则内存中将保存大量的数据.<pre><code>var digitRegexp = regexp.MustCompile(&quot;[0-9]+&quot;)
+func FindDigits(filename string) []byte {
+  b, _ := ioutil.ReadFile(filename)
+  //只需要一小部分数据,但是却保存了一个文件的切片,
+  //因为需要的数据是重新切分的切片,和原数据应用的相同的底层数组.
+  return digitRegexp.Find(b)
+}
+func CopyDigits(filename string) []byte {
+  b, _ := ioutil.ReadFile(filename)
+  b = digitRegexp.Find(b)
+  c := make([]byte, len(b))
+  //用新数据代替了原数据,函数返回后原数据就会被销毁,不占用内存.
+  copy(c, b)
+  return c
+}</code></pre></li>
+</ul>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">本文作者：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">bubujiang</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">本文链接：</span><span class="p-copytight-value"><a href="/2020/06/12/golang-slice/">https://bubujiang.github.io/2020/06/12/golang-slice/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">版权声明：</span><span class="p-copytight-value">本博客所有文章除特殊声明外，均采用<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>许可协议。转载请注明出处 <a href="https://bubujiang.github.io">bubujiang的博客</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/tags/golang/">golang</a><a href="/tags/slice/">slice</a></span></div><aside id="toc"><div class="toc-title">目录</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#声明"><span class="toc-number">1.</span> <span class="toc-text">声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#扩容"><span class="toc-number">2.</span> <span class="toc-text">扩容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法1"><span class="toc-number">2.1.</span> <span class="toc-text">方法1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法2"><span class="toc-number">2.2.</span> <span class="toc-text">方法2</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#注意事项"><span class="toc-number">3.</span> <span class="toc-text">注意事项</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/2020/06/13/golang-scheduler/">&lt; golang调度模型(一)</a><a class="next" href="/2020/06/12/hexo-deploy/">hexo可恢复部署(github pages) &gt;</a></div></section><footer><p>Copyright © 2016 - 2021 <a href="/." rel="nofollow">沧海一粟</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/js/search.js"></script><script type="text/javascript" src="/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.1" async></script></body></html>
