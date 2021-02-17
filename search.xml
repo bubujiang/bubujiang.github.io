@@ -8,7 +8,7 @@
       <link href="2021/02/17/dsa-base/"/>
       <url>2021/02/17/dsa-base/</url>
       
-        <content type="html"><![CDATA[<h1 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h1><h2 id="指数"><a href="#指数" class="headerlink" title="指数"></a>指数</h2><p>x_i<br>a^n * a^m = a^(n+m)<br>a^n / a^m = a^(n-m)<br>(ab)^n = (a^n)(b^n)<br>(a^n)m = a^nm</p><h2 id="对数"><a href="#对数" class="headerlink" title="对数"></a>对数</h2><h2 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h2><h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><ol><li><strong>基准情形</strong><br>必须有基准情形，无需递归就能解出。</li><li><strong>不断推进</strong><br>不断朝基准情形推进。</li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h1><h2 id="指数"><a href="#指数" class="headerlink" title="指数"></a>指数</h2><p>$$<br>a^n * a^m = a^{m+n}<br>$$<br>$$<br>a^n / a^m = a^{n-m}<br>$$<br>$$<br>(ab)^n = a^nb^n<br>$$<br>$$<br>(a^n)^m = a^{nm}<br>$$</p><h2 id="对数"><a href="#对数" class="headerlink" title="对数"></a>对数</h2><blockquote><p>计算机科学中，默认所有的对数都是以2为底的。</p></blockquote><p>$$log_xAB = log_xA + log_xB$$<br>$$log_AB = \frac{log_xA}{log_xB}$$<br>$$log_xA/B = log_xA - log_xB$$<br>$$log_x(A^B) = B \quad log_xA$$</p><h2 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h2><p>$$\sum_{i=0}^NA^i = \frac{A^{N+1} - 1}{A - 1}$$</p><h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><ol><li><strong>基准情形</strong><br>必须有基准情形，无需递归就能解出。</li><li><strong>不断推进</strong><br>不断朝基准情形推进。</li></ol>]]></content>
       
       
       <categories>
