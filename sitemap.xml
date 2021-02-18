@@ -72,14 +72,14 @@
   </url>
   
   <url>
-    <loc>https://bubujiang.github.io/2020/06/11/golang-panic/</loc>
+    <loc>https://bubujiang.github.io/2020/06/12/golang-interface-assert/</loc>
     
     <lastmod>2020-12-02</lastmod>
     
   </url>
   
   <url>
-    <loc>https://bubujiang.github.io/2020/06/12/golang-interface-assert/</loc>
+    <loc>https://bubujiang.github.io/2020/06/11/golang-panic/</loc>
     
     <lastmod>2020-12-02</lastmod>
     
@@ -93,6 +93,13 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://bubujiang.github.io/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
   <url>
     <loc>https://bubujiang.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
@@ -109,14 +116,14 @@
   </url>
   
   <url>
-    <loc>https://bubujiang.github.io/tags/panic/</loc>
+    <loc>https://bubujiang.github.io/tags/interface/</loc>
     <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://bubujiang.github.io/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <loc>https://bubujiang.github.io/tags/panic/</loc>
     <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -144,7 +151,7 @@
   </url>
   
   <url>
-    <loc>https://bubujiang.github.io/tags/interface/</loc>
+    <loc>https://bubujiang.github.io/tags/slice/</loc>
     <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -159,13 +166,6 @@
   
   <url>
     <loc>https://bubujiang.github.io/tags/deploy/</loc>
-    <lastmod>2021-02-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bubujiang.github.io/tags/slice/</loc>
     <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
