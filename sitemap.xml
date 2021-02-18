@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bubujiang.github.io/2021/02/18/dsa-tsq/</loc>
+    
+    <lastmod>2021-02-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://bubujiang.github.io/2021/02/17/dsa-base/</loc>
     
     <lastmod>2021-02-17</lastmod>
@@ -9,14 +16,14 @@
   </url>
   
   <url>
-    <loc>https://bubujiang.github.io/tags/index.html</loc>
+    <loc>https://bubujiang.github.io/categories/index.html</loc>
     
     <lastmod>2020-12-02</lastmod>
     
   </url>
   
   <url>
-    <loc>https://bubujiang.github.io/categories/index.html</loc>
+    <loc>https://bubujiang.github.io/tags/index.html</loc>
     
     <lastmod>2020-12-02</lastmod>
     
@@ -51,13 +58,6 @@
   </url>
   
   <url>
-    <loc>https://bubujiang.github.io/2020/06/12/golang-slice/</loc>
-    
-    <lastmod>2020-12-02</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://bubujiang.github.io/2020/06/13/golang-scheduler/</loc>
     
     <lastmod>2020-12-02</lastmod>
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://bubujiang.github.io/2020/06/12/golang-interface-assert/</loc>
+    <loc>https://bubujiang.github.io/2020/06/12/golang-slice/</loc>
     
     <lastmod>2020-12-02</lastmod>
     
@@ -78,102 +78,116 @@
     
   </url>
   
+  <url>
+    <loc>https://bubujiang.github.io/2020/06/12/golang-interface-assert/</loc>
+    
+    <lastmod>2020-12-02</lastmod>
+    
+  </url>
+  
 
   <url>
     <loc>https://bubujiang.github.io/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://bubujiang.github.io/tags/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <loc>https://bubujiang.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bubujiang.github.io/tags/golang/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bubujiang.github.io/tags/interface/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bubujiang.github.io/tags/runtime/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bubujiang.github.io/tags/scheduler/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bubujiang.github.io/tags/debug/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bubujiang.github.io/tags/slice/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bubujiang.github.io/tags/hexo/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bubujiang.github.io/tags/deploy/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bubujiang.github.io/tags/mysql/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bubujiang.github.io/tags/%E4%BA%8B%E5%8A%A1/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bubujiang.github.io/tags/%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bubujiang.github.io/tags/panic/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bubujiang.github.io/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bubujiang.github.io/tags/runtime/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bubujiang.github.io/tags/scheduler/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bubujiang.github.io/tags/debug/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bubujiang.github.io/tags/interface/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bubujiang.github.io/tags/hexo/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bubujiang.github.io/tags/deploy/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bubujiang.github.io/tags/slice/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bubujiang.github.io/tags/mysql/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bubujiang.github.io/tags/%E4%BA%8B%E5%8A%A1/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bubujiang.github.io/tags/%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/</loc>
+    <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -182,28 +196,28 @@
   
   <url>
     <loc>https://bubujiang.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bubujiang.github.io/categories/golang/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bubujiang.github.io/categories/javascript/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bubujiang.github.io/categories/mysql/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

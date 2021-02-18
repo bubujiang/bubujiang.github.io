@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>数据结构与算法-表、栈、队列</title>
+      <link href="2021/02/18/dsa-tsq/"/>
+      <url>2021/02/18/dsa-tsq/</url>
+      
+        <content type="html"><![CDATA[<h1 id="表"><a href="#表" class="headerlink" title="表"></a>表</h1><blockquote><p>表可以用数组来实现，但数组的效率低下(如在表头插入，要移动整个表的数据)。</p></blockquote><ul><li>单向链表</li><li>双向链表</li><li>循环链表</li></ul><p>&nbsp;</p><h1 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h1><p>又称为LIFO(后进先出)表。只有进栈和出栈，全部都在栈顶操作。<br>&nbsp;</p><h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1><p>又称为FIFO表。像一个管道，从表的末端入队，从表的开头出队。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据结构与算法-基础</title>
       <link href="2021/02/17/dsa-base/"/>
       <url>2021/02/17/dsa-base/</url>
